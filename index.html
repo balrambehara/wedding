@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balram ❤️ Sneha Wedding</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff7f7;
+    margin: 0;
+    text-align: center;
+    color: #444;
+}
+
+/* HERO */
+.header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* COUNTDOWN */
+.countdown {
+    background: #fff;
+    display: inline-block;
+    margin-top: -50px;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+/* SECTION */
+.section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border-left: 5px solid #e91e63;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.date {
+    color: #e91e63;
+    font-weight: 600;
+}
+
+/* FAMILY */
+.family-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media(max-width:600px){
+    .family-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.5rem; }
+}
+
+.quote {
+    margin-top: 40px;
+    font-style: italic;
+}
+.hindi {
+    color: #777;
+    font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="subtitle">✨ Save The Date ✨</div>
+    <h1>Balram & Sneha</h1>
+    <p>
+        (S/O Late Kampa Behara & Dhobani)<br>
+        <strong>के साथ</strong><br>
+        (D/O Nakul Behera & Sujan Behera)
+    </p>
+    <p>Are tying the knot 💍</p>
+</div>
+
+<div class="countdown">
+    <div id="timer">Loading...</div>
+    <p>Countdown to the Wedding Day</p>
+</div>
+
+<div class="section">
+    <h2>Wedding Ceremony Details</h2>
+    <span class="hindi">विवाह समारोह विवरण</span>
+
+    <div class="card">
+        <strong>Engagement / सगाई</strong><br>
+        <span class="date">15 April 2026 (Evening)</span><br>
+        Village – Kolidaspur, Dist – Ganjam (Odisha)
+    </div>
+
+    <div class="card">
+        <strong>Marriage / विवाह</strong><br>
+        <span class="date">19 April 2026 (Night)</span><br>
+        Village – Sikiri, Via-Hinjalicut, Dist – Ganjam (Odisha)
+    </div>
+
+    <div class="card">
+        <strong>Reception / स्वागत समारोह</strong><br>
+        <span class="date">22 April 2026 (12:30 PM Onwards)</span><br>
+        Village – Sikiri, Via-Hinjalicut, Dist – Ganjam (Odisha)
+    </div>
+</div>
+
+<hr style="width:60%; border:0.5px solid #ddd;">
+
+<div class="section">
+    <div class="family-grid">
+
+        <div class="card">
+            <h3>Groom’s Family / वर पक्ष</h3>
+            <p><strong>Late Kampa Behara</strong> (Father)<br>
+            <strong>Dhobani</strong> (Mother)</p>
+
+            <p>
+            Renu & Surendra N. Behara<br>
+            Rasmita & Prabhakar N. Behara<br>
+            Ranjeeta & Videshi Muduli
+            </p>
+
+            <small>Rudra, Yakshita, Yukti</small>
+        </div>
+
+        <div class="card">
+            <h3>Bride’s Family / वधू पक्ष</h3>
+            <p><strong>Nakul Behera</strong> (Father)<br>
+            <strong>Sujan Behera</strong> (Mother)</p>
+
+            <p>
+            Prinshu Behera<br>
+            Anshu Behera
+            </p>
+        </div>
+
+    </div>
+
+    <p class="quote">
+        "With the blessings and presence of all respected elders and beloved friends."<br>
+        <span class="hindi">
+        सभी आदरणीय चाचा-चाची, मामा-मामी, दादा-दादी, नाना-नानी, भाई-बहन एवं दोनों परिवारों के समस्त प्रियजन एवं मित्रगण
+        </span>
+    </p>
+</div>
+
+<script>
+const weddingDate = new Date("April 19, 2026 20:00:00").getTime();
+
+setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+    d + "d " + h + "h " + m + "m " + s + "s";
+
+    if(distance < 0){
+        document.getElementById("timer").innerHTML = "Just Married ❤️";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
